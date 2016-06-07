@@ -1,0 +1,384 @@
+// Import link for font
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+
+/*
+      ___           ___           ___       ___           ___           ___           ___     
+     /\  \         /\  \         /\__\     /\  \         /\  \         /\  \         /\  \    
+    /::\  \       /::\  \       /:/  /    /::\  \       /::\  \       /::\  \        \:\  \   
+   /:/\:\  \     /:/\:\  \     /:/  /    /:/\:\  \     /:/\:\  \     /:/\:\  \        \:\  \  
+  /::\~\:\__\   /::\~\:\  \   /:/  /    /::\~\:\  \   /:/  \:\  \   /::\~\:\  \       /::\  \ 
+ /:/\:\ \:|__| /:/\:\ \:\__\ /:/__/    /:/\:\ \:\__\ /:/__/ \:\__\ /:/\:\ \:\__\     /:/\:\__\
+ \:\~\:\/:/  / \:\~\:\ \/__/ \:\  \    \/__\:\ \/__/ \:\  \ /:/  / \/_|::\/:/  /    /:/  \/__/
+  \:\ \::/  /   \:\ \:\__\    \:\  \        \:\__\    \:\  /:/  /     |:|::/  /    /:/  /     
+   \:\/:/  /     \:\ \/__/     \:\  \        \/__/     \:\/:/  /      |:|\/__/     \/__/      
+    \::/__/       \:\__\        \:\__\                  \::/  /       |:|  |                  
+     ~~            \/__/         \/__/                   \/__/         \|__|           
+*/
+
+/*  LESS template to use at the beginning of a Belfort website  */
+
+/////////////////////////////////////////////////////////
+/*	Variables	*/
+/////////////////////////////////////////////////////////
+
+@primary: #198ee5;
+@secondary: #f2502a;
+@btntextcolor: #fff;
+
+@primaryfont: 'Open Sans', sans-serif;
+
+@padding: 32px;
+
+@basefontsize: .875em;
+@basefontcolor: #000;
+
+@basebuttonsize: .875em;
+
+@pagebg: #fafafa;
+
+@headerheight: 60px;
+@headerbg: @primary;
+
+@linkcolor: #000;
+
+@sidebarbg: #000;
+
+@footerpadding: @padding;
+@footerbg: #fff;
+
+
+/////////////////////////////////////////////////////////
+/*	Typography	*/
+/////////////////////////////////////////////////////////
+* {
+	font-family: @primaryfont;
+}
+
+html {
+	body {
+		font-size: 100%;
+	    a {
+
+	    }
+		p {
+			font-size: @basefontsize;
+			line-height: @basefontsize * 2;
+		}
+		h1 {
+			font-size: @basefontsize * 4;
+		}
+		h2 {
+			font-size: @basefontsize * 3;
+		}
+		h3 {
+			font-size: @basefontsize * 2;
+		}
+		h4 {
+			font-size: @basefontsize * 1.5;
+		}
+		h5 {
+			font-size: @basefontsize * 1.25;
+		}	
+		.text--uppercase {
+			text-transform: uppercase !important;
+		}	
+		.text--light {
+			font-weight: 300 !important;
+		}
+		.text--medium {
+			font-weight: 500 !important;
+		}
+		.text--semibold {
+		  font-weight: 600 !important;
+		}
+		.text--bold {
+			font-weight: 700 !important;
+		}
+		.text--italic {
+			font-style: italic;
+		}
+		.text--primary {
+			color: @primary !important;
+		}
+		.text--secondary {
+			color: @secondary !important;
+		}
+		.text--white {
+			color: #ffffff !important;
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////
+/*	Buttons  */
+/////////////////////////////////////////////////////////
+.btn {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	min-width: 200px;
+	text-decoration: none;
+	line-height: @basefontsize * 3;
+	color: @btntextcolor;
+	padding: 0px 8px;
+	i {
+		opacity: 0;
+		margin-left: -8px;
+	}
+	&.btn--primary {
+		background: @primary;
+		&:hover {
+			background: darken(@primary,10%);
+		}
+	}
+	&.btn--secondary {
+		background: @secondary;
+		&:hover {
+			background: darken(@secondary,10%);
+		}
+	}
+	&.btn--bordered-primary {
+	    background: transparent;
+	    color: @primary;
+	    border: 1.25px solid @primary;
+	    &:hover {
+	      background: darken(@primary,10%);
+	      color: #fff;
+	    }
+	}
+	&.btn--bordered-secondary {
+	    background: transparent;
+	    color: @secondary;
+	    border: 1.25px solid @secondary;
+	    &:hover {
+	      background: darken(@secondary,10%);
+	      color: #fff;
+	    }
+	}
+	&.btn--bordered-white {
+		background: transparent;
+		color: #ffffff;
+		border: 1.25px solid #ffffff;
+		&:hover {
+		  background: @primary;
+		  color: #fff;
+		}
+	}
+	&.btn--block {
+		display: block;
+	}
+  &.btn--large {
+    font-size: @basefontsize * 3;
+  }
+  &.btn--medium {
+    font-size: @basefontsize * 2;
+  }
+	&:hover {
+		i {
+			opacity: 1;
+			margin-left: 8px;
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////
+/*	Header  */
+/////////////////////////////////////////////////////////
+.header {
+	height: @headerheight;
+	background: #ffffff;
+	&.header--fixed {
+		position: fixed;
+	}
+	&.header--default {
+		background: #ffffff;
+		ul {
+			li {
+				a {
+					color: #252525;
+				}
+			}
+		}
+	}
+	&.header--primary {
+		background: @primary;
+	}
+	&.header--secondary {
+		background: @secondary;
+	}
+	h1,h2,h3,h4,h5 {
+		margin: 0px;
+	}
+	ul {
+		list-style-type: none;
+		li {
+			display: inline-block;
+			margin: 0px 8px;
+			a {
+				color: #fff;
+				text-decoration: none;
+				i {
+
+				}
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////
+/*	Sidebar  */
+/////////////////////////////////////////////////////////
+aside {
+
+}
+
+/////////////////////////////////////////////////////////
+/*	Footer  */
+/////////////////////////////////////////////////////////
+footer {
+
+}
+
+/////////////////////////////////////////////////////////
+/*	Forms  */
+/////////////////////////////////////////////////////////
+form {
+	label {
+		width: 100%;
+		display: inline-block;
+		color: @basefontcolor;
+		margin-bottom: 16px;
+	}
+	input {
+		width: 95%;
+		margin-top: 8px;
+		padding-left: 12px;
+		font-size: @basefontsize;
+		line-height: @basefontsize * 3;
+		color: @primary;
+		&::-webkit-input-placeholder {
+		 color: lighten((@basefontcolor),60%);
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		 color: lighten((@basefontcolor),60%);
+		}
+		&::-moz-placeholder {  /* Firefox 19+ */
+		 color: lighten((@basefontcolor),60%);
+		}
+		&:-ms-input-placeholder {  
+		 color: lighten((@basefontcolor),60%);
+		}
+	}
+	.select2 {
+	  width: 100% !important;
+	}
+	.select2-selection {
+	  border: 1px solid rgb(238, 238, 238);
+	}
+}
+
+/////////////////////////////////////////////////////////
+/*	Global stylings  */
+/////////////////////////////////////////////////////////
+
+html {
+	body {
+    background: @pagebg;
+    margin: 0px;
+    padding: 0px;
+	* {
+		// Transition all of the things!
+		transition: all .2s ease-in-out;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		outline: none;
+	}
+	img, iframe {
+		max-width: 100%;
+	}
+	.row {
+		margin: 0px auto;
+		&.row__full-height {
+			min-height: 86vh;
+		}
+		&.row__half-height {
+			min-height: 43vh;
+		}
+	}
+	.show--mobile {
+	  display: none;
+	}
+	.hide--mobile {
+
+	}
+	.bg--primary {
+		background: @primary;
+	}
+	.bg--secondary {
+		background: @secondary;
+	}
+    .overlay {
+      transition: all .2s ease-in-out;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      content: '';
+      position: absolute;
+      background: rgba(0,0,0,.75);
+      z-index: 5;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      &.overlay--fixed {
+        position: fixed;
+      }
+    }
+	}
+}
+
+/////////////////////////////////////////////////////////
+/*  Large screens  */
+/////////////////////////////////////////////////////////
+@media all and (min-width: 1441px) {
+  
+}
+
+/////////////////////////////////////////////////////////
+/*	Mac average  */
+/////////////////////////////////////////////////////////
+@media all and (min-width: 1280px) and (max-width: 1440px) {
+  
+}
+
+/////////////////////////////////////////////////////////
+/*  Windows Average  */
+/////////////////////////////////////////////////////////
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  
+}
+
+/////////////////////////////////////////////////////////
+/*  Tablet  */
+/////////////////////////////////////////////////////////
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/////////////////////////////////////////////////////////
+/*  Phone  */
+/////////////////////////////////////////////////////////
+@media all and (max-width: 767px) {
+  .show--mobile {
+    display: block;
+  }
+  .hide--mobile {
+    display: none;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 479px) {
+
+}

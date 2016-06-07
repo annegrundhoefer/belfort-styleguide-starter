@@ -1,0 +1,276 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+/*
+      ___           ___           ___       ___           ___           ___           ___     
+     /\  \         /\  \         /\__\     /\  \         /\  \         /\  \         /\  \    
+    /::\  \       /::\  \       /:/  /    /::\  \       /::\  \       /::\  \        \:\  \   
+   /:/\:\  \     /:/\:\  \     /:/  /    /:/\:\  \     /:/\:\  \     /:/\:\  \        \:\  \  
+  /::\~\:\__\   /::\~\:\  \   /:/  /    /::\~\:\  \   /:/  \:\  \   /::\~\:\  \       /::\  \ 
+ /:/\:\ \:|__| /:/\:\ \:\__\ /:/__/    /:/\:\ \:\__\ /:/__/ \:\__\ /:/\:\ \:\__\     /:/\:\__\
+ \:\~\:\/:/  / \:\~\:\ \/__/ \:\  \    \/__\:\ \/__/ \:\  \ /:/  / \/_|::\/:/  /    /:/  \/__/
+  \:\ \::/  /   \:\ \:\__\    \:\  \        \:\__\    \:\  /:/  /     |:|::/  /    /:/  /     
+   \:\/:/  /     \:\ \/__/     \:\  \        \/__/     \:\/:/  /      |:|\/__/     \/__/      
+    \::/__/       \:\__\        \:\__\                  \::/  /       |:|  |                  
+     ~~            \/__/         \/__/                   \/__/         \|__|           
+*/
+/*  LESS template to use at the beginning of a Belfort website  */
+/*	Variables	*/
+/*	Typography	*/
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+html body {
+  font-size: 100%;
+}
+html body p {
+  font-size: 0.875em;
+  line-height: 1.75em;
+}
+html body h1 {
+  font-size: 3.5em;
+}
+html body h2 {
+  font-size: 2.625em;
+}
+html body h3 {
+  font-size: 1.75em;
+}
+html body h4 {
+  font-size: 1.3125em;
+}
+html body h5 {
+  font-size: 1.09375em;
+}
+html body .text--uppercase {
+  text-transform: uppercase !important;
+}
+html body .text--light {
+  font-weight: 300 !important;
+}
+html body .text--medium {
+  font-weight: 500 !important;
+}
+html body .text--semibold {
+  font-weight: 600 !important;
+}
+html body .text--bold {
+  font-weight: 700 !important;
+}
+html body .text--italic {
+  font-style: italic;
+}
+html body .text--primary {
+  color: #198ee5 !important;
+}
+html body .text--secondary {
+  color: #f2502a !important;
+}
+html body .text--white {
+  color: #ffffff !important;
+}
+/*	Buttons  */
+.btn {
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 200px;
+  text-decoration: none;
+  line-height: 2.625em;
+  color: #ffffff;
+  padding: 0px 8px;
+}
+.btn i {
+  opacity: 0;
+  margin-left: -8px;
+}
+.btn.btn--primary {
+  background: #198ee5;
+}
+.btn.btn--primary:hover {
+  background: #1471b7;
+}
+.btn.btn--secondary {
+  background: #f2502a;
+}
+.btn.btn--secondary:hover {
+  background: #dc350d;
+}
+.btn.btn--bordered-primary {
+  background: transparent;
+  color: #198ee5;
+  border: 1.25px solid #198ee5;
+}
+.btn.btn--bordered-primary:hover {
+  background: #1471b7;
+  color: #fff;
+}
+.btn.btn--bordered-secondary {
+  background: transparent;
+  color: #f2502a;
+  border: 1.25px solid #f2502a;
+}
+.btn.btn--bordered-secondary:hover {
+  background: #dc350d;
+  color: #fff;
+}
+.btn.btn--bordered-white {
+  background: transparent;
+  color: #ffffff;
+  border: 1.25px solid #ffffff;
+}
+.btn.btn--bordered-white:hover {
+  background: #198ee5;
+  color: #fff;
+}
+.btn.btn--block {
+  display: block;
+}
+.btn.btn--large {
+  font-size: 2.625em;
+}
+.btn.btn--medium {
+  font-size: 1.75em;
+}
+.btn:hover i {
+  opacity: 1;
+  margin-left: 8px;
+}
+/*	Header  */
+.header {
+  height: 60px;
+  background: #ffffff;
+}
+.header.header--fixed {
+  position: fixed;
+}
+.header.header--default {
+  background: #ffffff;
+}
+.header.header--default ul li a {
+  color: #252525;
+}
+.header.header--primary {
+  background: #198ee5;
+}
+.header.header--secondary {
+  background: #f2502a;
+}
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.header h5 {
+  margin: 0px;
+}
+.header ul {
+  list-style-type: none;
+}
+.header ul li {
+  display: inline-block;
+  margin: 0px 8px;
+}
+.header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+/*	Sidebar  */
+/*	Footer  */
+/*	Forms  */
+form label {
+  width: 100%;
+  display: inline-block;
+  color: #000000;
+  margin-bottom: 16px;
+}
+form input {
+  width: 95%;
+  margin-top: 8px;
+  padding-left: 12px;
+  font-size: 0.875em;
+  line-height: 2.625em;
+  color: #198ee5;
+}
+form input::-webkit-input-placeholder {
+  color: #999999;
+}
+form input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #999999;
+}
+form input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #999999;
+}
+form input:-ms-input-placeholder {
+  color: #999999;
+}
+form .select2 {
+  width: 100% !important;
+}
+form .select2-selection {
+  border: 1px solid #eeeeee;
+}
+/*	Global stylings  */
+html body {
+  background: #fafafa;
+  margin: 0px;
+  padding: 0px;
+}
+html body * {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  outline: none;
+}
+html body img,
+html body iframe {
+  max-width: 100%;
+}
+html body .row {
+  margin: 0px auto;
+}
+html body .row.row__full-height {
+  min-height: 86vh;
+}
+html body .row.row__half-height {
+  min-height: 43vh;
+}
+html body .show--mobile {
+  display: none;
+}
+html body .bg--primary {
+  background: #198ee5;
+}
+html body .bg--secondary {
+  background: #f2502a;
+}
+html body .overlay {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+html body .overlay.overlay--fixed {
+  position: fixed;
+}
+/*  Large screens  */
+/*	Mac average  */
+/*  Windows Average  */
+/*  Tablet  */
+/*  Phone  */
+@media all and (max-width: 767px) {
+  .show--mobile {
+    display: block;
+  }
+  .hide--mobile {
+    display: none;
+  }
+}
